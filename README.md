@@ -5,11 +5,13 @@
 
 1. Prepare .xls file following below template guide lines < Example - EVPN_L2_Bridging_info.xls>
 
-· Create your Xcel file with extension .xls
-· Leave row number 2 empty and start writing Information from row number 3
-· Xls file sheet name should be Sheet1 < default >
-· Stuck to the name and column location based on Template
-· Don’t use space while naming excel file. Example :Allow excel file name => EVPN_L2_Bridging_info.xls
+      · Create your Xcel file with extension .xls
+      
+      · Leave row number 2 empty and start writing Information from row number 3
+      
+      · Xls file sheet name should be Sheet1 < default >
+      
+      · Don’t use space while naming excel file. Example :Allow excel file name => EVPN_L2_Bridging_info.xls
 
 2. Generate configuration file use command 
 
