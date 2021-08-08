@@ -1,0 +1,40 @@
+{% if Vlan -%}
+interface {{ evpn_Int }}.{{ Vlan }} l2transport
+ encapsulation dot1q {{ Vlan }}
+ rewrite ingress tag pop 1 symmetric
+!
+{% endif -%}
+{% if nVlan -%}
+interface {{ evpn_Int_nvlan }}.{{ nVlan }} l2transport
+encapsulation untagged
+!
+{% endif -%}
+{% if eVlan -%}
+evpn
+evi {{ eVlan }}
+advertise-mac
+!
+{% endif -%}
+{% if l2vpn_Vlan -%}
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain {{l2vpn_Vlan}}
+{% for interfaces in l2vpn_int -%}
+interface {{interfaces}}.{{l2vpn_Vlan}}
+{% endfor -%}
+!
+evi {{l2vpn_Vlan}}
+!
+{% endif -%}
+{% if l2vpn_Nvlan -%}
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain {{l2vpn_Nvlan}}
+{% for nvlan_int in l2vpn_nvlan_int -%}
+interface {{nvlan_int}}.{{l2vpn_Nvlan}}
+{% endfor -%}
+!
+evi {{l2vpn_Nvlan}}
+!
+{% endif -%}
+

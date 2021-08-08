@@ -1,0 +1,114 @@
+interface Bundle-Ether101.501 l2transport
+ encapsulation dot1q 501
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether101.502 l2transport
+ encapsulation dot1q 502
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether101.503 l2transport
+ encapsulation dot1q 503
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether101.504 l2transport
+ encapsulation dot1q 504
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether101.505 l2transport
+ encapsulation dot1q 505
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether102.501 l2transport
+ encapsulation dot1q 501
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether102.502 l2transport
+ encapsulation dot1q 502
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether102.503 l2transport
+ encapsulation dot1q 503
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether102.504 l2transport
+ encapsulation dot1q 504
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether102.505 l2transport
+ encapsulation dot1q 505
+ rewrite ingress tag pop 1 symmetric
+!
+interface Bundle-Ether101.500 l2transport
+encapsulation untagged
+!
+evpn
+evi 500
+advertise-mac
+!
+evpn
+evi 502
+advertise-mac
+!
+evpn
+evi 501
+advertise-mac
+!
+evpn
+evi 504
+advertise-mac
+!
+evpn
+evi 505
+advertise-mac
+!
+evpn
+evi 503
+advertise-mac
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 501
+interface Bundle-Ether102.501
+interface Bundle-Ether101.501
+!
+evi 501
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 502
+interface Bundle-Ether102.502
+interface Bundle-Ether101.502
+!
+evi 502
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 503
+interface Bundle-Ether102.503
+interface Bundle-Ether101.503
+!
+evi 503
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 504
+interface Bundle-Ether102.504
+interface Bundle-Ether101.504
+!
+evi 504
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 505
+interface Bundle-Ether102.505
+interface Bundle-Ether101.505
+!
+evi 505
+!
+l2vpn
+bridge group EVPN_ALL_ACTIVE 
+bridge-domain 500
+interface Bundle-Ether101.500
+!
+evi 500
+!
