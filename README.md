@@ -3,9 +3,7 @@
 
 Usage Step: How to generate => EVPN L2 Bridge Service Configuration Builder from XLS Jinja2
 
-1. Prepare .xls file following below template guide lines < Example - EVPN_L2_Bridging_info.xls>. Xls column value should be identical with their name and column location.
-
-Note:
+1. Prepare .xls file following below template guide lines < Example - EVPN_L2_Bridging_info.xls>.
 · Create your Xcel file with extension .xls
 · Leave row number 2 empty and start writing Information from row number 3
 · Xls file sheet name should be Sheet1 < default >
