@@ -15,5 +15,5 @@
 
 2. Generate configuration file use command 
 
-**python3 EVPN-Config-Builder.py <YOUR_EXCEL_FILE.xls> < YOUR_CONFIG_FILE.txt>          < hit Enter > **
+** python3 EVPN-Config-Builder.py <YOUR_EXCEL_FILE.xls> < YOUR_CONFIG_FILE.txt> **
 
